@@ -35,9 +35,36 @@ Income FileWithIncomes::getNewIncomeDetails(int activeUserId) {
         break;
     }
     case '2': {
-        cout << "Enter date in the format YYYY-MM_DD: ";
+        cout << "Enter date in the format YYYY-MM-DD: ";
         string dateStr = "";
         dateStr = AuxiliaryMethods::loadLine();
+
+        string daysStr = dateStr.substr(8,2);
+        int days = AuxiliaryMethods::convertStringToInt(daysStr);
+
+        string monthStr = dateStr.substr(5,2);
+        int month = AuxiliaryMethods::convertStringToInt(monthStr);
+
+        string yearStr = dateStr.substr(0,4);
+        int year = AuxiliaryMethods::convertStringToInt(yearStr);
+
+        bool result = TimeConnectedMethods::checkNumberOfDays(year, month, days);
+
+        if(result == false) {
+            do {
+                cout << endl;
+                cout << "Incorrect number of days. Enter again: ";
+                dateStr = AuxiliaryMethods::loadLine();
+                string daysStr = dateStr.substr(8,2);
+                int days = AuxiliaryMethods::convertStringToInt(daysStr);
+                string monthStr = dateStr.substr(5,2);
+                int month = AuxiliaryMethods::convertStringToInt(monthStr);
+                string yearStr = dateStr.substr(0,4);
+                int year = AuxiliaryMethods::convertStringToInt(yearStr);
+                bool result = TimeConnectedMethods::checkNumberOfDays(year, month, days);
+            } while(result != false);
+        }
+
         if(!TimeConnectedMethods::checkDateFormat(dateStr)) {
             cout << "Incorrect date format. Enter again: ";
             dateStr = AuxiliaryMethods::loadLine();

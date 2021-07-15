@@ -21,6 +21,8 @@ public:
     static string convertDateFormat(string date);
     static bool checkDateFormat(string date);
     static int setCurrentMonth();
+    static int getNumberOfDays(int year, int month);
+    static bool checkNumberOfDays(int year, int month, int days);
 
 };
 
