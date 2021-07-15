@@ -1,0 +1,8 @@
+obj/
+bin/
+Users.xml
+Incomes.xml
+Expenses.xml
+home-budget.cbp
+home-budget.depend
+home-budget.layout
