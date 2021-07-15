@@ -1,6 +1,6 @@
 #include "FileWithExpenses.h"
 
-void FileWithExpenses::addNewExpense(int activeUserId) {
+/*void FileWithExpenses::addNewExpense(int activeUserId) {
     Expense newExpense;
 
     system("cls");
@@ -9,7 +9,7 @@ void FileWithExpenses::addNewExpense(int activeUserId) {
 
     expenses.push_back(newExpense);
     addExpenseToFile(newExpense);
-}
+}*/
 
 Expense FileWithExpenses::getNewExpenseDetails(int activeUserId) {
     Expense newExpense;

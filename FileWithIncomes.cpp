@@ -1,6 +1,6 @@
 #include "FileWithIncomes.h"
 
-void FileWithIncomes::addNewIncome(int activeUserId) {
+/*void FileWithIncomes::addNewIncome(int activeUserId) {
     Income newIncome;
 
     system("cls");
@@ -9,7 +9,7 @@ void FileWithIncomes::addNewIncome(int activeUserId) {
 
     incomes.push_back(newIncome);
     addIncomeToFile(newIncome);
-}
+}*/
 
 Income FileWithIncomes::getNewIncomeDetails(int activeUserId) {
     Income newIncome;

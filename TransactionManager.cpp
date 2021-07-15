@@ -1,13 +1,35 @@
 #include "TransactionManager.h"
 
-void TransactionManager::addNewIncome() {
+/*void TransactionManager::addNewIncome() {
     fileWithIncomes.addNewIncome(ACTIVE_USER_ID);
     incomes = fileWithIncomes.loadIncomesFromFile(ACTIVE_USER_ID);
+}*/
+
+void TransactionManager::addNewIncome() {
+    Income newIncome;
+
+    system("cls");
+    cout << " >>> ADD NEW INCOME <<<" << endl << endl;
+    newIncome = fileWithIncomes.getNewIncomeDetails(ACTIVE_USER_ID);
+
+    incomes.push_back(newIncome);
+    fileWithIncomes.addIncomeToFile(newIncome);
 }
 
-void TransactionManager::addNewExpense() {
+/*void TransactionManager::addNewExpense() {
     fileWithExpenses.addNewExpense(ACTIVE_USER_ID);
     expenses = fileWithExpenses.loadExpensesFromFile(ACTIVE_USER_ID);
+}*/
+
+void TransactionManager::addNewExpense() {
+    Expense newExpense;
+
+    system("cls");
+    cout << " >>> ADD NEW EXPENSE <<<" << endl << endl;
+    newExpense = fileWithExpenses.getNewExpenseDetails(ACTIVE_USER_ID);
+
+    expenses.push_back(newExpense);
+    fileWithExpenses.addExpenseToFile(newExpense);
 }
 
 void TransactionManager::showAllRevenues() {
