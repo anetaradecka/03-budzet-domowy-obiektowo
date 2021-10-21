@@ -16,7 +16,7 @@ public:
     FileWithIncomes(string incomesFileName): INCOMES_FILE_NAME(incomesFileName){
         lastIncomeId = 0;
     };
-    void addNewIncome(int activeUserId);
+    //void addNewIncome(int activeUserId);
     Income getNewIncomeDetails(int activeUserId);
     void addIncomeToFile(Income newIncome);
     vector <Income> loadIncomesFromFile(int ACTIVE_USER_ID);

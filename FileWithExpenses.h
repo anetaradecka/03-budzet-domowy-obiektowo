@@ -16,7 +16,7 @@ public:
     FileWithExpenses(string expensesFileName): EXPENSES_FILE_NAME(expensesFileName){
         lastExpenseId = 0;
     };
-    void addNewExpense(int activeUserId);
+   // void addNewExpense(int activeUserId);
     Expense getNewExpenseDetails(int activeUserId);
     void addExpenseToFile(Expense newExpense);
     vector <Expense> loadExpensesFromFile(int ACTIVE_USER_ID);
